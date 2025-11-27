@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    # Servicio externo (API pública)
+    # Servicio externo (API pública) llama al servicio
     url = "https://jsonplaceholder.typicode.com/users"
     response = requests.get(url)
 
