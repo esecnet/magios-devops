@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Usuarios desde API</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        .usuario-box {
+            border: 1px solid #999;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            background-color: #f4f4f4;
+            width: 350px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 6px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Usuarios obtenidos desde la API</h1>
+
+    {% for u in usuarios %}
+        <div class="usuario-box">
+
+            <label>Nombre:</label>
+            <input type="text" value="{{ u.name }}" readonly>
+
+            <label>Email:</label>
+            <input type="text" value="{{ u.email }}" readonly>
+
+            <label>Ciudad:</label>
+            <input type="text" value="{{ u.address.city }}" readonly>
+
+        </div>
+    {% endfor %}
+
+</body>
+</html>
