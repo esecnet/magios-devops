@@ -6,12 +6,12 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      app: magios_green
+      app: mi_app
       version: green
   template:
     metadata:
       labels:
-        app: magios_green
+        app: mi_app
         version: green
     spec:
       containers:
