@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: mi-app
-          image: ochito/magios-green:1.0
+          image: ochito/magios-green:74188f9
           ports:
             - containerPort: 5000
